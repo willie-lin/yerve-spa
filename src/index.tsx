@@ -3,12 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "assets/styles/tailwind.css";
+import "../src/assets/styles/tailwind.css";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import Admin from "../src/layouts/Admin"
+// import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
+// BrowserRouter as Router
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+
+  <Router>
+        <Routes>
+            <Route path="/" element={<App/>} />
+
+            <Route path="/admin" element={<Admin/>} />
+
+        </Routes>
+
+  </Router>,
   document.getElementById('root')
 );
 
