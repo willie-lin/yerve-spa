@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import "../src/assets/styles/tailwind.css";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import Admin from "../src/layouts/Admin"
+import FirstComponent from "./components/FirstComponent";
+import UserComponent from "./components/UserComponent";
 // import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
 // BrowserRouter as Router
 
@@ -14,15 +16,20 @@ ReactDOM.render(
   //   <App />
   // </React.StrictMode>,
 
-  <Router>
-        <Routes>
-            <Route path="/" element={<App/>} />
-
-            <Route path="/admin" element={<Admin/>} />
-
-        </Routes>
-
-  </Router>,
+  // <Router>
+  //       <Routes>
+  //           <Route path="/" element={<App/>} />
+  //
+  //           <Route path="/admin" element={<Admin/>} />
+  //
+  //       </Routes>
+  //
+  // </Router>,
+    <div>
+        <h1>Hello, Welcome to React and TypeScript</h1>
+        <FirstComponent/>
+        <UserComponent name="John" age={23} address="87 Summer St, Boston, MA 02110" dob={new Date()} />
+    </div>,
   document.getElementById('root')
 );
 
